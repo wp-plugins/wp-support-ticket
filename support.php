@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: WP Support
+Plugin Name: WP Support Ticket
 Plugin URI: http://aviplugins.com/
 Description: Wordpress user support plugin. Registered users will be able to create new support tickets and reply to already created support tickets. 
 Version: 1.0.1
