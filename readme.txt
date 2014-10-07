@@ -1,7 +1,7 @@
 === WP Support Ticket ===
 Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
-Tags: support, support ticket, user support
+Tags: support, support ticket, user support, wordpress support, reply, ticket, help, user help, ticket support
 Requires at least: 2.0.2
 Tested up to: 4.0.0
 Stable tag: 1.0.1
