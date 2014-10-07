@@ -26,7 +26,7 @@ Wordpress user support plugin. Registered users will be able to create new suppo
 
 == Installation ==
 
-1. Upload `wp-support.zip` to the `/wp-content/plugins/` directory.
+1. Upload `wp-support-ticket.zip` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Go to `Settings-> WP Support`, and set some options. It's really easy.
 4. Use shortcodes or functions to display uploaded files in frontend.
