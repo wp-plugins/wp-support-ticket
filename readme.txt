@@ -1,4 +1,4 @@
-=== WP Support ===
+=== WP Support Ticket ===
 Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: support, support ticket, user support
