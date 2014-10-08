@@ -26,6 +26,15 @@ Use this plugin to create your own user support system. Let customers of your si
 * [ticket] to display tickets created by logged in user.
 * [ticket_search] to display ticket search form.
 
+= WP Support (PRO) =
+There is a PRO version of this plugin that supports that supports additional features. You can get it <a href="http://aviplugins.com/wp-support-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
+
+* Multiple files can be attached with the ticket reply.
+* Set supported file types from admin panel.
+* Manage email contents from admin panel. Emails that are fired when a new ticket is created or admin posts a reply.
+* Set custom name for the administrator.
+* Advanced ticket search form.
+
 
 == Installation ==
 
