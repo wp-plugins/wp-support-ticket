@@ -59,6 +59,10 @@ There is a PRO version of this plugin that supports that supports additional fea
 
 == Changelog ==
 
+
+= 1.0.2 =
+* Email notifications are added.
+
 = 1.0.1 =
 * This is the first release.
 
