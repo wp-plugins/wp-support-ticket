@@ -173,6 +173,24 @@ class reply_class {
 		}
 		// add attachments //
 		
+		
+		// emails //
+		// admin email // 
+		$user_info = get_userdata(get_current_user_id());
+		$headers = 'From: '.$user_info->user_login.' <'.$user_info->user_email.'>' . "\r\n";
+		$message .= __('A new ticket is created.') . "\r\n\r\n";
+		$message .= __('Message: ').$data['ticket_body']. "\r\n\r\n";
+		wp_mail(get_option('support_admin_email'), $data['ticket_subject'], $message, $headers);
+		
+		// user email //
+		$headers1 = 'From: '.get_bloginfo('name').' <'.get_option('support_admin_from_email').'>' . "\r\n";
+		$message1 .= __('Hello,') . "\r\n";
+		$message1 .= $user_info->user_login . "\r\n\r\n";
+		$message1 .= __('Your new support ticket is successfully added.') . "\r\n\r\n";
+		$message1 .= __('Thank You') . "\r\n\r\n";
+		wp_mail($user_info->user_email, 'New support ticket', $message1, $headers1);
+		// emails //
+		
 		return true;
 	}
 	
@@ -226,6 +244,16 @@ class reply_class {
 			}
 		}
 		// add attachments //
+		
+		
+		// emails //
+		// admin email // 
+		$user_info = get_userdata(get_current_user_id());
+		$headers = 'From: '.$user_info->user_login.' <'.$user_info->user_email.'>' . "\r\n";
+		$message .= 'A new ticket reply is posted on '. get_the_title( $this->ticket_id ) . "\r\n\r\n";
+		$message .= __('Message: ').$data['ticket_body']. "\r\n\r\n";
+		wp_mail(get_option('support_admin_email'), 'New reply added', $message, $headers);
+		// emails //
 		
 		return true;
 	}

@@ -190,7 +190,18 @@ class ticket_meta_class {
 			}
 		}
 		// add attachments //
-
+		
+		// emails //
+		// user email // 
+		$post_author_id = get_post_field( 'post_author', $post_id );
+		$user_info = get_userdata($post_author_id);
+		$headers1 = 'From: '.get_bloginfo('name').' <'.get_option('support_admin_from_email').'>' . "\r\n";
+		$message1 .= __('Hello,') . "\r\n\r\n";
+		$message1 .= 'A new ticket reply is posted on '. get_the_title( $post_id ) . "\r\n\r\n";
+		$message1 .= __('Message: ').$_REQUEST['reply_msg']. "\r\n\r\n";
+		$message1 .= __('Thank You'). "\r\n\r\n";
+		wp_mail($user_info->user_email, 'New ticket reply', $message1, $headers1);
+		// emails //
 		
 	}
 	

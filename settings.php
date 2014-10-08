@@ -16,6 +16,8 @@ class wp_support_settings {
 	
 	function  wp_support_afo_options() {
 		global $wpdb;
+		$support_admin_email = get_option('support_admin_email');
+		$support_admin_from_email = get_option('support_admin_from_email');
 		$ticket_sc_page = get_option('ticket_sc_page');
 		?>
 		<form name="f" method="post" action="">
@@ -24,6 +26,19 @@ class wp_support_settings {
 		  <tr>
 			<td width="25%"><h1>WP Support</h1></td>
 			<td width="75%">&nbsp;</td>
+		  </tr>
+		  <tr>
+			<td valign="top"><strong>Admin Email:</strong></td>
+			<td>
+			<input type="text" name="support_admin_email" value="<?php echo $support_admin_email;?>" />
+				<br />
+				<i>This mail will be used when support ticket related email are send. (When new ticket is created by user, User add a reply to a ticket etc.)</i></td>
+		  </tr>
+		  <tr>
+			<td valign="top"><strong>From Email:</strong></td>
+			<td>
+			<input type="text" name="support_admin_from_email" value="<?php echo $support_admin_from_email;?>" />
+				</td>
 		  </tr>
 		  <tr>
 			<td valign="top"><strong>Ticket Shortcode Page:</strong></td>
@@ -65,7 +80,9 @@ class wp_support_settings {
 	
 	function wp_support_save_settings(){
 		if($_POST['option'] == "wp_support_save_settings"){
-			update_option( 'ticket_sc_page', $_POST['ticket_sc_page'] );
+			update_option( 'ticket_sc_page', sanitize_text_field($_POST['ticket_sc_page']) );
+			update_option( 'support_admin_from_email', sanitize_text_field($_POST['support_admin_from_email']) );
+			update_option( 'support_admin_email', sanitize_text_field($_POST['support_admin_email']) );
 		}
 	}
 	
