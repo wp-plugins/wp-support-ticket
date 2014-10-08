@@ -17,7 +17,7 @@ Use this plugin to create your own user support system. Let customers of your si
 * Registered users / Customers can create support tickets.
 * Customers can search tickets from the ticket list.
 * Admin can reply on support tickets from admin panel.
-* Files can be attached to the reply message.
+* Files can be attached to the reply message. Supported files that can be uploaded are jpg, jpeg, png, gif, doc, docx, pdf, zip
 * Ticket can be marked as Open / Closed / Resolved from admin panel.
 
 
@@ -30,7 +30,7 @@ Use this plugin to create your own user support system. Let customers of your si
 There is a PRO version of this plugin that supports that supports additional features. You can get it <a href="http://aviplugins.com/wp-support-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
 
 * Multiple files can be attached with the ticket reply.
-* Set supported file types from admin panel.
+* Additional file types are supported in the PRO version. Set supported file types from admin panel.
 * Manage email contents from admin panel. Emails that are fired when a new ticket is created or admin posts a reply.
 * Set custom name for the administrator.
 * Advanced ticket search form.

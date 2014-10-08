@@ -17,6 +17,18 @@ Author URI: http://avifoujdar.wordpress.com/
 
 $ticket_status_array = array( 1 => 'Open', 2 => 'Closed', 3 => 'Resolved');
 
+$supported_files_array = array( 
+'image/jpeg', 
+'image/jpeg', 
+'image/png', 
+'image/gif', 
+'application/msword', 
+'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
+'application/pdf', 
+'application/zip'
+);
+
+
 include_once dirname( __FILE__ ) . '/settings.php';
 include_once dirname( __FILE__ ) . '/ticket_class.php';
 include_once dirname( __FILE__ ) . '/message_class.php';

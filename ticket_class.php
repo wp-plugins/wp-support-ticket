@@ -170,7 +170,7 @@ class ticket_meta_class {
 			
 			add_filter('wp_handle_upload_prefilter', 'support_attachment_upload_filter_admin' );
 			
-			$supported_types = array('application/pdf');
+			$supported_types = array( 'image/jpeg',	'image/jpeg', 'image/png', 'image/gif', 'application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf', 'application/zip'	);
 			$arr_file_type = wp_check_filetype($uploadedfile['name']);
 			$uploaded_type = $arr_file_type['type'];
 			
