@@ -30,8 +30,8 @@ Use this plugin to create your own user support system. Let customers of your si
 There is a PRO version of this plugin that supports that supports additional features. You can get it <a href="http://aviplugins.com/wp-support-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
 
 * Multiple files can be attached with the ticket reply.
-* Create Support Ticket Widget.
-* Support Ticket List Widget. To list recent/ specific tickets in the widget area.
+* Create Support Ticket (Widget).
+* Support Ticket List (Widget). To list recent/ specific tickets in the widget area.
 * Additional file types are supported in the PRO version. Set supported file types from admin panel.
 * Manage email contents from admin panel. Emails that are fired when a new ticket is created or admin posts a reply.
 * Set custom name for the administrator.
