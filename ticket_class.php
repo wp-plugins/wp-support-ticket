@@ -70,6 +70,7 @@ class ticket_meta_class {
 
 	public function __construct() {
 		add_action( 'add_meta_boxes', array( $this, 'ticket_other_fields' ) );
+		add_action( 'add_meta_boxes', array( $this, 'ticket_author_fields' ) );
 		add_action( 'add_meta_boxes', array( $this, 'ticket_reply_box' ) );
 		add_action( 'add_meta_boxes', array( $this, 'ticket_posts_box' ) );
 		add_action( 'save_post', array( $this, 'save' ) );
@@ -83,6 +84,20 @@ class ticket_meta_class {
 					'ticket_other_fields'
 					,__( 'Status', 'wpt' )
 					,array( $this, 'render_ticket_other_fields' )
+					,$post_type
+					,'side'
+					,'high'
+				);
+			}
+	}
+	
+	public function ticket_author_fields( $post_type ) {
+			$post_types = array('ticket');  
+			if ( in_array( $post_type, $post_types )) {
+				add_meta_box(
+					'ticket_author_fields'
+					,__( 'Author', 'wpt' )
+					,array( $this, 'render_ticket_author_fields' )
 					,$post_type
 					,'side'
 					,'high'
@@ -217,6 +232,20 @@ class ticket_meta_class {
 				<select name="ticket_status">
 					<?php echo $rc->ticket_status_selected($ticket_status);?>
 				</select>
+			</td>
+		  </tr>
+		</table>
+		<?php
+	}
+	
+	public function render_ticket_author_fields( $post ) {
+		wp_nonce_field( 'wpt_inner_custom_box_ticket', 'wpt_inner_custom_box_ticket_nonce' );
+		$rc = new reply_class();
+		?>
+		<table width="100%" border="0">
+		<tr>
+			<td>
+				<?php _e('Author','wpt'); ?>: <?php echo $rc->get_ticket_author($post->ID);?>
 			</td>
 		  </tr>
 		</table>

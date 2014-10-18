@@ -92,6 +92,20 @@ class reply_class {
 		
 	}
 	
+	public function get_ticket_author($post_id = ''){
+		if(!$post_id){
+			return 'NA';
+		}
+		
+		$post = get_post( $post_id );
+		$user_info = get_userdata($post->post_author);
+		if( $user_info ){
+			return $user_info->display_name;
+		} else {
+			return 'NA';
+		}
+	}
+	
 	public function get_reply_user_name($user_id = ''){
 		if(!$user_id){
 			return 'NA';
