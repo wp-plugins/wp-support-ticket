@@ -14,11 +14,12 @@ Wordpress user support plugin. Registered users will be able to create new suppo
 
 Use this plugin to create your own user support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
 
+
 * Registered users / Customers can create support tickets.
 * Customers can search tickets from the ticket list.
 * Admin can reply on support tickets from admin panel.
 * Files can be attached to the reply message. Supported files that can be uploaded are jpg, jpeg, png, gif, doc, docx, pdf, zip
-* Ticket can be marked as Open / Closed / Resolved from admin panel.
+* Ticket can be marked as Open / Closed / Resolved from admin panel. If a customer post a reply in the Resolved ticket the status of the ticket will be changed to Open.
 
 
 = Usage Shortcodes =
@@ -29,13 +30,14 @@ Use this plugin to create your own user support system. Let customers of your si
 = WP Support (PRO) =
 There is a PRO version of this plugin that supports that supports additional features. You can get it <a href="http://aviplugins.com/wp-support-pro/" target="_blank">here</a> in <strong>USD 2.00</strong>
 
+* Administrators can post replies by logging in to admin panel. Additionally a new user role <strong>Agent</strong> will be created with the plugin. Administraton can assign this role to the support agents so that they can login to the admin panel and reply to the support tickets. Agents will have limited access (<strong>Only Support Ticket Section</strong>) to the admin panel.
 * Multiple files can be attached with the ticket reply.
 * Create Support Ticket (Widget).
 * Support Ticket List (Widget). To list recent/ specific tickets in the widget area.
 * Additional file types are supported in the PRO version. Set supported file types from admin panel.
 * Manage email contents from admin panel. Emails that are fired when a new ticket is created or admin posts a reply.
 * Set custom name for the administrator.
-* Advanced ticket search form.
+* Advanced ticket search.
 
 
 == Installation ==

@@ -60,10 +60,10 @@ class WPsupport {
 		$wpdb->query($create_table1);
 		
      }
-	 
-	  static function wps_uninstall() {}
+	  static function wps_uninstall() { }
 }
 register_activation_hook( __FILE__, array( 'WPsupport', 'wps_install' ) );
+register_deactivation_hook( __FILE__, array( 'WPsupport', 'wps_uninstall' ) );
 
 add_action('init', 'wp_support_do_rewrite' );
 function wp_support_do_rewrite(){
