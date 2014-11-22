@@ -7,7 +7,7 @@ class support_message_class {
 	}
 	
 	function show_message(){
-		if($_SESSION['add_ticket_msg']){
+		if(isset($_SESSION['add_ticket_msg']) and $_SESSION['add_ticket_msg']){
 			echo '<p class="'.$_SESSION['add_ticket_msg_class'].'">'.$_SESSION['add_ticket_msg'].'</p>';
 			unset($_SESSION['add_ticket_msg']);
 			unset($_SESSION['add_ticket_msg_class']);

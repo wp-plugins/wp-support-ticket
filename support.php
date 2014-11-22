@@ -3,7 +3,7 @@
 Plugin Name: WP Support Ticket
 Plugin URI: http://aviplugins.com/
 Description: Wordpress user support plugin. Registered users will be able to create new support tickets and reply to already created support tickets. 
-Version: 1.1.1
+Version: 2.0.0
 Author: avimegladon
 Author URI: http://avifoujdar.wordpress.com/
 */

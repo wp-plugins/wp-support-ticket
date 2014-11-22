@@ -4,7 +4,7 @@ Donate link: http://aviplugins.com/donate/
 Tags: support, support ticket, user support, wordpress support, reply, ticket, help, user help, ticket support, support email, email notification, email, email support, support plugin, user support plugin, plugin support
 Requires at least: 2.0.2
 Tested up to: 4.0.0
-Stable tag: 1.1.1
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,9 @@ There is a PRO version of this plugin that supports that supports additional fea
 5. Support tickets listing front end.
 
 == Changelog ==
+
+= 2.0.0 =
+* Notice message bug fixed.
 
 = 1.1.1 =
 * Little modificatios done in ticket reply page (admin panel). 

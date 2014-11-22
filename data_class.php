@@ -10,7 +10,7 @@ class support_data_class{
 	
 	function support_ticket_validate(){
 	
-		if($_REQUEST['action'] == 'add_ticket'){
+		if(isset($_REQUEST['action']) and $_REQUEST['action'] == 'add_ticket'){
 			$error = false;
 			$msg = '';
 			$mc = new support_message_class;
@@ -48,7 +48,7 @@ class support_data_class{
 			}
 		}
 		
-		if($_REQUEST['action'] == 'add_reply'){
+		if(isset($_REQUEST['action']) and $_REQUEST['action'] == 'add_reply'){
 			$error = false;
 			$msg = '';
 			$mc = new support_message_class;

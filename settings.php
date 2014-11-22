@@ -79,7 +79,7 @@ class wp_support_settings {
 	}
 	
 	function wp_support_save_settings(){
-		if($_POST['option'] == "wp_support_save_settings"){
+		if(isset($_POST['option']) and $_POST['option'] == "wp_support_save_settings"){
 			update_option( 'ticket_sc_page', sanitize_text_field($_POST['ticket_sc_page']) );
 			update_option( 'support_admin_from_email', sanitize_text_field($_POST['support_admin_from_email']) );
 			update_option( 'support_admin_email', sanitize_text_field($_POST['support_admin_email']) );
@@ -87,7 +87,7 @@ class wp_support_settings {
 	}
 	
 	function wp_support_afo_menu () {
-		add_options_page( 'WP Support', 'WP Support', 10, 'wp_support_afo', array( $this, 'wp_support_afo_options' ));
+		add_options_page( 'WP Support', 'WP Support', 'activate_plugins', 'wp_support_afo', array( $this, 'wp_support_afo_options' ));
 	}
 	
 }
