@@ -36,6 +36,7 @@ There is a PRO version of this plugin that supports that supports additional fea
 * Support Ticket List (Widget). To list recent/ specific tickets in the widget area.
 * Additional file types are supported in the PRO version. Set supported file types from admin panel.
 * Manage email contents from admin panel. Emails that are fired when a new ticket is created or admin posts a reply.
+* Option to list all support tickets submitted by users. So that visitors can view tickets and replies.
 * Set custom name for the administrator.
 * Advanced ticket search.
 
