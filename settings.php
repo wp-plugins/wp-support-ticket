@@ -3,6 +3,7 @@ class wp_support_settings {
 	
 	function __construct() {
 		add_action( 'admin_menu', array( $this, 'wp_support_afo_menu' ) );
+		add_action( 'plugins_loaded',  array( $this, 'wp_support_ticket_text_domain' ) );
 		add_action( 'admin_init',  array( $this, 'wp_support_save_settings' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'wp_support_name_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'wp_support_name_scripts' ) );
@@ -12,6 +13,10 @@ class wp_support_settings {
 		wp_enqueue_style( 'bootstrap', plugins_url('assets/bootstrap.css', __FILE__));
 		wp_enqueue_style( 'bootstrap-theme', plugins_url('assets/bootstrap-theme.css', __FILE__));
 		wp_enqueue_script( 'jquery' );
+	}
+	
+	function wp_support_ticket_text_domain(){
+		load_plugin_textdomain('wst', FALSE, basename( dirname( __FILE__ ) ) .'/languages');
 	}
 	
 	function  wp_support_afo_options() {

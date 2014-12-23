@@ -26,7 +26,7 @@ class create_support_sc_class{
 			<input type="hidden" name="action" value="add_ticket" />
 		  <div class="form-group">
 			<label for="exampleInputEmail1"><?php _e('Subject','wst');?></label>
-			<input type="text" class="form-control" id="ticket_subject" name="ticket_subject" placeholder="Ticket Title">
+			<input type="text" class="form-control" id="ticket_subject" name="ticket_subject" placeholder="<?php _e('Ticket Title','wst');?>">
 		  </div>
 		  <div class="form-group">
 			<label for="exampleInputPassword1"><?php _e('Message','wst');?></label>
@@ -37,7 +37,7 @@ class create_support_sc_class{
 				<input type="file" name="safile" id="safile" />
 		   </div>
 		  
-		  <button type="submit" class="btn btn-default">Submit</button>
+		  <button type="submit" class="btn btn-default"><?php _e('Submit','wst');?></button>
 		</form>
 		<?php
 		$ret = ob_get_clean();	
@@ -80,7 +80,7 @@ class ticket_sc_class{
 				<label for="exampleInputPassword1"><?php _e('Ticket','wst');?></label>
 				<input type="text" name="st_title" class="form-control"  />
 			  </div>
-		  <button type="submit" class="btn btn-default">Submit</button>
+		  <button type="submit" class="btn btn-default"><?php _e('Submit','wst');?></button>
 		</form>
 		<?php
 		$this->get_ticket_reply($id);
@@ -115,7 +115,7 @@ class ticket_sc_class{
 		$ticket_status = get_post_meta( $id, '_ticket_status', true );
 		?>
 		<h2><?php echo get_the_title( $id ); ?> </h2>
-		<h3>Status <?php echo $ticket_status_array[$ticket_status]; ?> </h3>
+		<h3><?php _e('Status','wst');?> <?php echo $ticket_status_array[$ticket_status]; ?> </h3>
 		<form action="" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="action" value="add_reply" />
 		    <input type="hidden" name="ticket_id" value="<?php echo $id;?>" />
@@ -128,7 +128,7 @@ class ticket_sc_class{
 					<input type="file" name="safile" id="safile" />
 		   	   </div>
 		  
-		  <button type="submit" class="btn btn-default">Submit</button>
+		  <button type="submit" class="btn btn-default"><?php _e('Submit','wst');?></button>
 		</form>
 		<?php
 		$this->get_ticket_reply($id);
@@ -145,9 +145,9 @@ class ticket_sc_class{
 		}
 		
 		if(get_option('permalink_structure') != ''){
-			$link = get_permalink(get_option('ticket_sc_page')).'/details/'.$id;
+			$link = get_permalink(get_option('ticket_sc_page')).'details/'.$id;
 		} else {
-			$link = get_permalink(get_option('ticket_sc_page')).'&view=details&supticket='.$id;
+			$link = get_permalink(get_option('ticket_sc_page')).'?view=details&supticket='.$id;
 		}
 		return $link;
 	}
@@ -170,10 +170,10 @@ class ticket_sc_class{
 		<table class="table table-hover">
 		  <thead>
 			<tr>
-			  <th>#</th>
-			  <th>Ticket</th>
-			  <th>Status</th>
-			  <th>Last Post By</th>
+			  <th><?php _e('#','wst');?></th>
+			  <th><?php _e('Ticket','wst');?></th>
+			  <th><?php _e('Status','wst');?></th>
+			  <th><?php _e('Last Post By','wst');?></th>
 			</tr>
 		  </thead>
 		  <tbody>
@@ -193,7 +193,7 @@ class ticket_sc_class{
 				} // end of loop
 			} else { ?>
 			<tr>
-			  <td colspan="4" align="center"><?php _e('Support ticket not found');?></td>
+			  <td colspan="4" align="center"><?php _e('Support ticket not found','wst');?></td>
 			</tr>
 			<?php } ?>
 		  </tbody>
@@ -204,8 +204,8 @@ class ticket_sc_class{
 		echo paginate_links( array(
 			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 			'format' => '?paged=%#%',
-			'prev_text' => __('Previous'),
-			'next_text' => __('Next'),
+			'prev_text' => __('Previous','wst'),
+			'next_text' => __('Next','wst'),
 			'current' => max( 1, get_query_var('paged') ),
 			'total' => $data->max_num_pages
 		) );
@@ -240,7 +240,7 @@ class ticket_sc_class{
 		<?php 
 			} // end of foreach
 		} else { 
-			_e('No reply posted yet.');
+			_e('No reply posted yet.','wst');
 		}
 	}
 	
@@ -249,7 +249,7 @@ class ticket_sc_class{
 		$rc = new reply_class;
 		$data = $rc->get_attachments_data($reply_id);
 		if($data){
-			echo _e('Attachments:');
+			_e('Attachments:','wst');
 			foreach($data as $key => $value){
 				echo '<a href="'.$value->att_file.'" target="_blank"><img style="border:none;" src="'.plugins_url('assets/attach.png', __FILE__).'"></a>';
 			}

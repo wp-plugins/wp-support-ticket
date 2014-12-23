@@ -3,7 +3,7 @@
 Plugin Name: WP Support Ticket
 Plugin URI: http://aviplugins.com/
 Description: Wordpress user support plugin. Registered users will be able to create new support tickets and reply to already created support tickets. 
-Version: 2.0.0
+Version: 2.1.0
 Author: avimegladon
 Author URI: http://avifoujdar.wordpress.com/
 */
@@ -34,6 +34,7 @@ include_once dirname( __FILE__ ) . '/ticket_class.php';
 include_once dirname( __FILE__ ) . '/message_class.php';
 include_once dirname( __FILE__ ) . '/data_class.php';
 include_once dirname( __FILE__ ) . '/reply_class.php';
+include_once dirname( __FILE__ ) . '/mod.php';
 include_once dirname( __FILE__ ) . '/support_shortcode.php';
 
 class WPsupport {
@@ -64,21 +65,3 @@ class WPsupport {
 }
 register_activation_hook( __FILE__, array( 'WPsupport', 'wps_install' ) );
 register_deactivation_hook( __FILE__, array( 'WPsupport', 'wps_uninstall' ) );
-
-add_action('init', 'wp_support_do_rewrite' );
-function wp_support_do_rewrite(){
-	$ticket_sc_page = get_option('ticket_sc_page');
-	$ticket_page = get_post($ticket_sc_page);
-	add_rewrite_rule('^'.$ticket_page->post_name.'/details/([^/]*)/?','index.php?page_id='.$ticket_sc_page.'&view=details&supticket=$matches[1]','top');
-}
-
-add_action('init', 'custom_rewrite_tag', 10, 0);
-function custom_rewrite_tag() {
-	add_rewrite_tag('%supticket%', '([^&]+)');
-}
-
-function add_wp_support_query_vars_filter( $vars ){
-  $vars[] = "st_title";
-  return $vars;
-}
-add_filter( 'query_vars', 'add_wp_support_query_vars_filter' );

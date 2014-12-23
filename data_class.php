@@ -19,15 +19,15 @@ class support_data_class{
 			
 			if(!is_user_logged_in()){
 				$error = true;
-				$msg .= 'Please login to create ticket.<br>';
+				$msg .= __('Please login to create ticket.','wst').'<br>';
 			}
 			if(!$ticket_subject){
 				$error = true;
-				$msg .= 'Please enter ticket subject.<br>';
+				$msg .= __('Please enter ticket subject.','wst').'<br>';
 			}
 			if(!$ticket_body){
 				$error = true;
-				$msg .= 'Please enter ticket message.<br>';
+				$msg .= __('Please enter ticket message.','wst').'<br>';
 			}
 			
 			if(!$error){
@@ -37,10 +37,10 @@ class support_data_class{
 				
 				if(!$ret){
 					$error = true;
-					$msg = 'Error: Ticket cannot be created.';
+					$msg = __('Error: Ticket cannot be created.','wst');
 					$mc->add_message($msg,'bg-danger');
 				} else {
-					$msg = 'Support ticket created successfully.';
+					$msg = __('Support ticket created successfully.','wst');
 					$mc->add_message($msg,'bg-success');
 				}
 			} else {
@@ -57,11 +57,11 @@ class support_data_class{
 			
 			if(!is_user_logged_in()){
 				$error = true;
-				$msg .= 'Please login to add reply.<br>';
+				$msg .= __('Please login to add reply.','wst').'<br>';
 			}
 			if(!$ticket_body){
 				$error = true;
-				$msg .= 'Please enter reply message.<br>';
+				$msg .= __('Please enter reply message.','wst').'<br>';
 			}
 			
 			if(!$error){
@@ -71,10 +71,10 @@ class support_data_class{
 				
 				if(!$ret){
 					$error = true;
-					$msg = 'Error: Reply cannot be created.';
+					$msg = __('Error: Reply cannot be created.','wst');
 					$mc->add_message($msg,'bg-danger');
 				} else {
-					$msg = 'Reply added successfully.';
+					$msg = __('Reply added successfully.','wst');
 					$mc->add_message($msg,'bg-success');
 				}
 			} else {

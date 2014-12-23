@@ -8,19 +8,19 @@ class ticket_class {
 	
 	function ticket_post() {
 		$labels = array(
-			'name'               => _x( 'Ticket', 'post type general name', 'wpt' ),
-			'singular_name'      => _x( 'Ticket', 'post type singular name', 'wpt' ),
-			'menu_name'          => _x( 'Tickets', 'admin menu', 'wpt' ),
-			'name_admin_bar'     => _x( 'Ticket', 'add new on admin bar', 'wpt' ),
-			'add_new'            => _x( 'Add New', 'Ticket', 'wpt' ),
-			'add_new_item'       => __( 'Add New Ticket', 'wpt' ),
-			'new_item'           => __( 'New Ticket', 'wpt' ),
-			'edit_item'          => __( 'Edit Ticket', 'wpt' ),
-			'view_item'          => __( 'View Ticket', 'wpt' ),
-			'all_items'          => __( 'All Tickets', 'wpt' ),
-			'search_items'       => __( 'Search Tickets', 'wpt' ),
-			'not_found'          => __( 'No Ticket found.', 'wpt' ),
-			'not_found_in_trash' => __( 'No Ticket found in Trash.', 'wpt' )
+			'name'               => _x( 'Ticket', 'post type general name', 'wst' ),
+			'singular_name'      => _x( 'Ticket', 'post type singular name', 'wst' ),
+			'menu_name'          => _x( 'Tickets', 'admin menu', 'wst' ),
+			'name_admin_bar'     => _x( 'Ticket', 'add new on admin bar', 'wst' ),
+			'add_new'            => _x( 'Add New', 'Ticket', 'wst' ),
+			'add_new_item'       => __( 'Add New Ticket', 'wst' ),
+			'new_item'           => __( 'New Ticket', 'wst' ),
+			'edit_item'          => __( 'Edit Ticket', 'wst' ),
+			'view_item'          => __( 'View Ticket', 'wst' ),
+			'all_items'          => __( 'All Tickets', 'wst' ),
+			'search_items'       => __( 'Search Tickets', 'wst' ),
+			'not_found'          => __( 'No Ticket found.', 'wst' ),
+			'not_found_in_trash' => __( 'No Ticket found in Trash.', 'wst' )
 		);
 	
 		$args = array(
@@ -44,9 +44,9 @@ class ticket_class {
 	
 	function show_ticket_fields($columns) {
 		$new_columns['cb'] = '<input type="checkbox" />';
-		$new_columns['title'] = __('Title', 'wpt');
-		$new_columns['last_post'] = __('Last Post');
-		$new_columns['status'] = __('Status');
+		$new_columns['title'] = __('Title', 'wst');
+		$new_columns['last_post'] = __('Last Post By','wst');
+		$new_columns['status'] = __('Status','wst');
 		return $new_columns;
 	}
 	
@@ -82,7 +82,7 @@ class ticket_meta_class {
 			if ( in_array( $post_type, $post_types )) {
 				add_meta_box(
 					'ticket_other_fields'
-					,__( 'Status', 'wpt' )
+					,__( 'Status', 'wst' )
 					,array( $this, 'render_ticket_other_fields' )
 					,$post_type
 					,'side'
@@ -96,7 +96,7 @@ class ticket_meta_class {
 			if ( in_array( $post_type, $post_types )) {
 				add_meta_box(
 					'ticket_author_fields'
-					,__( 'Author', 'wpt' )
+					,__( 'Author', 'wst' )
 					,array( $this, 'render_ticket_author_fields' )
 					,$post_type
 					,'side'
@@ -110,7 +110,7 @@ class ticket_meta_class {
 			if ( in_array( $post_type, $post_types )) {
 				add_meta_box(
 					'ticket_posts_box'
-					,__( 'Posts', 'wpt' )
+					,__( 'Posts', 'wst' )
 					,array( $this, 'render_ticket_posts_box' )
 					,$post_type
 					,'advanced'
@@ -124,7 +124,7 @@ class ticket_meta_class {
 			if ( in_array( $post_type, $post_types )) {
 				add_meta_box(
 					'ticket_reply_box'
-					,__( 'Reply', 'wpt' )
+					,__( 'Reply', 'wst' )
 					,array( $this, 'render_ticket_reply_box' )
 					,$post_type
 					,'advanced'
@@ -211,11 +211,11 @@ class ticket_meta_class {
 		$post_author_id = get_post_field( 'post_author', $post_id );
 		$user_info = get_userdata($post_author_id);
 		$headers1 = 'From: '.get_bloginfo('name').' <'.get_option('support_admin_from_email').'>' . "\r\n";
-		$message1 .= __('Hello,') . "\r\n\r\n";
-		$message1 .= 'A new ticket reply is posted on '. get_the_title( $post_id ) . "\r\n\r\n";
-		$message1 .= __('Message: ').$_REQUEST['reply_msg']. "\r\n\r\n";
-		$message1 .= __('Thank You'). "\r\n\r\n";
-		wp_mail($user_info->user_email, 'New ticket reply', $message1, $headers1);
+		$message1 .= __('Hello,','wst') . "\r\n\r\n";
+		$message1 .= __('A new ticket reply is posted on ','wst'). get_the_title( $post_id ) . "\r\n\r\n";
+		$message1 .= __('Message:','wst').$_REQUEST['reply_msg']. "\r\n\r\n";
+		$message1 .= __('Thank You','wst'). "\r\n\r\n";
+		wp_mail($user_info->user_email, __('New ticket reply','wst'), $message1, $headers1);
 		// emails //
 		
 	}
@@ -245,7 +245,7 @@ class ticket_meta_class {
 		<table width="100%" border="0">
 		<tr>
 			<td>
-				<?php _e('Author','wpt'); ?>: <?php echo $rc->get_ticket_author($post->ID);?>
+				<?php _e('Author','wst'); ?>: <?php echo $rc->get_ticket_author($post->ID);?>
 			</td>
 		  </tr>
 		</table>
@@ -278,7 +278,7 @@ class ticket_meta_class {
 			<?php 
 				} // end of foreach
 			} else {
-				_e('No reply posted yet.');
+				_e('No reply posted yet.','wst');
 			} ?>
 			</td>
 		  </tr>
@@ -290,7 +290,7 @@ class ticket_meta_class {
 		$rc = new reply_class;
 		$data = $rc->get_attachments_data($reply_id);
 		if($data){
-			echo _e('Attachments:');
+			_e('Attachments:','wst');
 			foreach($data as $key => $value){
 				echo '<a href="'.$value->att_file.'" target="_blank"><img border="0" src="'.plugins_url('assets/attach.png', __FILE__).'"></a>';
 			}
