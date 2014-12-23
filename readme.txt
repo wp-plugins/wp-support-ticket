@@ -48,11 +48,11 @@ There is a PRO version of this plugin that supports that supports additional fea
 3. Go to `Settings-> WP Support`, and set some options. It's really easy.
 4. Use shortcodes or functions to display uploaded files in frontend.
 
+* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/wst-da_DK.po">here</a>
+
 == Frequently Asked Questions ==
 
 1. Please email me demoforafo@gmail.com. Post your queries here http://aviplugins.com/support.php
-
-* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/wst-da_DK.po">here</a>
 
 == Screenshots ==
 
