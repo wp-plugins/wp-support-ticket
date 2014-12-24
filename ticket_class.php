@@ -326,6 +326,11 @@ function call_ticket_meta_class() {
     new ticket_meta_class();
 }
 
+function update_edit_form_for_ticket_post() {
+	echo ' enctype="multipart/form-data"';
+}
+add_action('post_edit_form_tag', 'update_edit_form_for_ticket_post');
+
 if ( is_admin() ) {
     add_action( 'load-post.php', 'call_ticket_meta_class' );
     add_action( 'load-post-new.php', 'call_ticket_meta_class' );
