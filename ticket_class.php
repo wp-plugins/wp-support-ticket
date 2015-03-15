@@ -25,7 +25,7 @@ class ticket_class {
 	
 		$args = array(
 			'labels'             => $labels,
-			'public'             => true,
+			'public'             => false,
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_menu'       => true,
