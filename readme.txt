@@ -41,6 +41,9 @@ There is a PRO version of this plugin that supports that supports additional fea
 * Advanced ticket search.
 
 
+> Post your plugin related queries at <a href="http://aviplugins.com/support.php">http://aviplugins.com/support.php</a>
+
+
 == Installation ==
 
 1. Upload `wp-support-ticket.zip` to the `/wp-content/plugins/` directory.
