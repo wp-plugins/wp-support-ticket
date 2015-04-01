@@ -1,5 +1,5 @@
 === WP Support Ticket ===
-Contributors: aviplugins.com
+Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: support, support ticket, user support, wordpress support, reply, ticket, help, user help, ticket support, support email, email notification, email, email support, support plugin, user support plugin, plugin support
 Requires at least: 2.0.2
