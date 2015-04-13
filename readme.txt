@@ -15,10 +15,10 @@ Wordpress user support plugin. Registered users will be able to create new suppo
 Use this plugin to create your own user support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
 
 
-* Registered users / Customers can create support tickets.
-* Customers can search tickets from the ticket list.
+* Registered Users / Customers can create support tickets.
+* Customers can search tickets from the tickets list.
 * Admin can reply on support tickets from admin panel.
-* Files can be attached to the reply message. Supported files that can be uploaded are jpg, jpeg, png, gif, doc, docx, pdf, zip
+* Files can be attached to the reply message. Supported files that can be uploaded are jpg, jpeg, png, gif, doc, docx, pdf, zip ( Multiple files can be attached in the <a href="http://aviplugins.com/wp-support-pro/" target="_blank">PRO</a> version )
 * Ticket can be marked as Open / Closed / Resolved from admin panel. If a customer post a reply in the Resolved ticket the status of the ticket will be changed to Open.
 
 
