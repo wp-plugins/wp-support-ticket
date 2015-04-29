@@ -3,7 +3,7 @@ Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: support, support ticket, user support, wordpress support, reply, ticket, help, user help, ticket support, support email, email notification, email, email support, support plugin, user support plugin, plugin support
 Requires at least: 2.0.2
-Tested up to: 4.1
+Tested up to: 4.2.1
 Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
