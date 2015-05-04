@@ -12,7 +12,7 @@ Wordpress user support plugin. Registered users will be able to create new suppo
 
 == Description ==
 
-Use this plugin to create your own user support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
+Use this plugin to create your own customer support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
 
 
 * Registered Users / Customers can create support tickets.
