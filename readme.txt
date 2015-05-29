@@ -8,7 +8,7 @@ Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Wordpress user support plugin. Registered users will be able to create new support tickets and reply to already created support tickets. 
+Wordpress user support plugin. Registered users will be able to create/ reply to support tickets. Admin can reply on the ticket from admin panel. Emails are sent when replies are submitted. This makes easier for users to track the support ticket. 
 
 == Description ==
 
