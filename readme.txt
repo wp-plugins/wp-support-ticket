@@ -3,7 +3,7 @@ Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: support, support ticket, user support, wordpress support, reply, ticket, help, user help, ticket support, support email, email notification, email, email support, support plugin, user support plugin, plugin support, user, agent, support agent, customer care, care user, customer support
 Requires at least: 2.0.2
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Wordpress user support plugin. Registered users will be able to create/ reply to
 
 == Description ==
 
-Use this plugin to create your own customer support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
+Use this plugin to create your very own customer support system. Let customers of your site to generate a support ticket when ever they require assistance from you, and you will be able to solve their issues by posting replies to the tickets. The customers will get email notifications when ever you add a reply message to the ticket.
 
 
 * Registered Users / Customers can create support tickets.
