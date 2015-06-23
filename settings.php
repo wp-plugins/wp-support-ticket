@@ -29,24 +29,29 @@ class wp_support_settings {
 		<input type="hidden" name="option" value="wp_support_save_settings" />
 		<table width="100%" border="0" style="background:#FFFFFF; width:98%; padding:10px; margin-top:20px;"> 
 		  <tr>
-			<td width="25%"><h1>WP Support</h1></td>
-			<td width="75%">&nbsp;</td>
+			<td colspan="2"><h1><?php _e('WP Support Settings','wst');?></h1></td>
+		  </tr>
+          <tr>
+			<td colspan="2">&nbsp;</td>
 		  </tr>
 		  <tr>
-			<td valign="top"><strong>Admin Email:</strong></td>
+			<td valign="top"><strong><?php _e('Admin Email','wst');?>:</strong></td>
 			<td>
 			<input type="text" name="support_admin_email" value="<?php echo $support_admin_email;?>" />
 				<br />
-				<i>This mail will be used when support ticket related email are send. (When new ticket is created by user, User add a reply to a ticket etc.)</i></td>
+				<i><?php _e('This mail will be used when support ticket related email are send. (When new ticket is created by user, User add a reply to a ticket etc.)','wst');?></i></td>
 		  </tr>
 		  <tr>
-			<td valign="top"><strong>From Email:</strong></td>
+			<td valign="top"><strong><?php _e('From Email','wst');?>:</strong></td>
 			<td>
 			<input type="text" name="support_admin_from_email" value="<?php echo $support_admin_from_email;?>" />
 				</td>
 		  </tr>
+          <tr>
+			<td colspan="2">&nbsp;</td>
+		  </tr>
 		  <tr>
-			<td valign="top"><strong>Ticket Shortcode Page:</strong></td>
+			<td valign="top"><strong><?php _e('Ticket Shortcode Page','wst');?>:</strong></td>
 			<td><?php
 					$args = array(
 					'depth'            => 0,
@@ -57,18 +62,18 @@ class wp_support_settings {
 					'name'             => 'ticket_sc_page'
 					);
 					wp_dropdown_pages( $args ); 
-				?>
+				?><font color="red"><?php _e('Important','wst');?></font>
 				<br />
-				<i>Please select the page where you have entered the <strong>[ticket]</strong> shortcode</i></td>
+				<i><?php _e('Please select the page where you have entered the <strong>[ticket]</strong> shortcode','wst');?></i></td>
 		  </tr>
 		   <tr>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 		  </tr>
 		  <tr>
-			<td valign="top"><strong>Note*</strong></td>
+			<td valign="top"><strong><?php _e('Note','wst');?>*</strong></td>
 			<td>
-			<p>1. When ever you change the ticket shortcode page please update your <a href="options-permalink.php">permalink</a> settings. So that it can match with your current settings.</p>
+			<p>1. When ever you Update the "Ticket Shortcode Page" please update the <a href="options-permalink.php">permalink</a> settings. So that it can match with your current settings.</p>
 			<p>2. If you are using permalinks for your site then your permalink structure should contain <strong>%supticket%</strong>.</p>
 			<p>For example, if your permalink looks like this <strong>/%postname%/</strong> then you should change that to <strong>/%postname%/%supticket%/</strong>. This is not mandatory.</p>
 			
@@ -76,7 +81,7 @@ class wp_support_settings {
 		  </tr>
 		  <tr>
 			<td>&nbsp;</td>
-			<td><input type="submit" name="submit" value="Save" class="button button-primary button-large" /></td>
+			<td><input type="submit" name="submit" value="<?php _e('Save','wst');?>" class="button button-primary button-large" /></td>
 		  </tr>
 		</table>
 		</form>
