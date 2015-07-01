@@ -51,6 +51,17 @@ There is a PRO version of this plugin that supports that supports additional fea
 3. Go to `Settings-> WP Support`, and set some options. It's really easy.
 4. Use shortcodes or functions to display uploaded files in frontend.
 
+Registered in users will be able to create support tickets.
+
+1. Create a new page and put [create_support] Shortcode in that page. This will be the page from where users will be able to create a support ticket thread.
+
+2. Create another page and put [ticket] Shortcode in that page. The tickets created by the registered users will be listed in this page. From this page users will be able to reply to already created tickets.
+
+3. Admin can View/ Reply to a ticket from admin panel.
+
+4. Emails will be sent to respective Admin or Users each time a ticket is created or replied.
+
+
 * If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/wst-da_DK.po">here</a>
 
 == Frequently Asked Questions ==
