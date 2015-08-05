@@ -41,7 +41,7 @@ There is a PRO version of this plugin that supports that supports additional fea
 * Set custom name for the administrator.
 * Advanced ticket search.
 
-> Checkout the <strong>User Chat</strong> Plugin Demo here <a href="http://www.aviplugins.com/wp-support-chat/" target="_blank">http://www.aviplugins.com/wp-support-chat/</a>
+> Checkout the <strong>User Support CHAT</strong> Plugin Demo here <a href="http://www.aviplugins.com/wp-support-chat/" target="_blank">http://www.aviplugins.com/wp-support-chat/</a>
 
 > Post your plugin related queries at <a href="http://aviplugins.com/support.php" target="_blank">http://aviplugins.com/support.php</a>
 
